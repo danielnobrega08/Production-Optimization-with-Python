@@ -1,0 +1,25 @@
+melhor_lucro = 0
+melhor_solucao = None
+
+for x in range(...):          # mesas
+    for y in range(...):      # cadeiras
+        for z in range(0, 7, 2):  # armários: 0, 2, 4 ou 6
+
+            madeira = 5*x + 2*y + 8*z
+            horas_A = 3*x + y
+            horas_B = y + 5*z
+
+            if (
+                madeira <= 100
+                and horas_A <= 40
+                and horas_B <= ...
+                # restantes condições
+            ):
+                lucro = 40*x + 25*y + 90*z
+
+                if lucro > melhor_lucro:
+                    melhor_lucro = lucro
+                    melhor_solucao = (x, y, z)
+
+print("Melhor solução:", melhor_solucao)
+print("Lucro máximo:", melhor_lucro)
